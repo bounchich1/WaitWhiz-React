@@ -1,0 +1,132 @@
+.h3-left {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-style: normal;
+    flex-shrink: 0;
+}
+.top-menu {
+    display: flex;
+    width: 100%;
+    gap: 55%;
+    flex-direction: row;
+}
+.top-menu-left {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+}
+.top-menu-right {
+    display: flex;
+    gap: 25%;
+    justify-content: right;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.h3-right {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-shrink: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+}
+
+.gradient-1 {
+    background-image: linear-gradient(#FEA800, #F29C21);
+}
+.gradient-2 {
+    background-image: linear-gradient(#E48D4C, #D9826C);
+}
+.gradient-3 {
+    background-image: linear-gradient(#CA7394, #BE67B8);
+}
+.gradient-4 {
+    background-image: linear-gradient(#AF58E3, #A64EFE);
+}
+
+.h1-2 {
+    font-family: 'Raleway', sans-serif;
+    color: #FEA800;
+    font-style: normal;
+    font-size: 4.8em;
+    text-align: left;
+    margin: 0.4em;
+}
+.h1-1 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-style: normal;
+    margin: 0.4em;
+    text-align: left;
+    font-size: 4.8em;
+}
+.h2-1 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-style: normal;
+    font-size: 2.4em;
+    font-weight: 550;
+    text-align: left;
+    margin: 0.8em;
+}
+.container {
+    margin-left: 8.5em;
+    margin-right: 3em;
+    display: flex;
+    gap: 10%;
+}
+.main-logo {
+    height: 80%;
+    width: 80%;
+}
+.logo-container {
+    align-self: center;
+    margin-top: 5em;
+}
+.h3-1 {
+    font-weight: 450;
+    font-size: 1.9em;
+    color: #A64EFE;
+    margin: 0 0 0 3em;
+    text-align: left;
+}
+.register-button {
+    width: 340px;
+    height: 60px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.7em;
+    border-radius: 20px;
+    box-shadow: 0 0 50px -10px rgba(255, 255, 255, 0.4) !important;
+    background-image: linear-gradient(90deg, #FEA800, #2A0153);
+    background-repeat: no-repeat;
+    border: none;
+    align-items: center;
+    text-align: center;
+    transition: all 30ms ease-in;
+    margin-right: 6em;
+    margin-top: 1em;
+}
+.register-button:hover {
+    cursor: pointer;
+
+}
+.register-button:focus {
+    border: none;
+    outline: none;
+    background-color: white;
+    filter: fade(25px 100%);
+}
+.register-button:active {
+    background-color: white;
+    opacity: 60%;
+}
+.text-container {
+    margin-bottom: 10em;
+}

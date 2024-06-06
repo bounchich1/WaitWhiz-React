@@ -1,0 +1,136 @@
+.pricing-card {
+    width: 485px;
+    justify-content: center;
+    border: double 3px transparent;
+    border-radius: 30px;
+    background-image: linear-gradient(#2D2C2F, #2D2C2F),
+    linear-gradient(#FEA800, #4F0996);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.pricing-card-height-1 {
+    height: 659px
+}
+.pricing-card-height-2 {
+    height: 820px
+}
+.pricing-card-height-3 {
+    height: 730px
+}
+.h1-about {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 750;
+    font-style: normal;
+    color: white;
+}
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+.option-container {
+    display: flex;
+    margin-left: 1em;
+    flex-direction: row;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.check-icon {
+    color: #FEA800;
+    align-self: center;
+}
+.pricing-h1 {
+    color: white;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.pricing-h2 {
+    color: white;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 2em;
+    font-weight: 400;
+}
+.pricing-card:nth-child(1){
+    grid-area: one;
+}
+.pricing-card:nth-child(2){
+    grid-area: two;
+}
+.pricing-card:nth-child(3){
+    grid-area: three;
+}
+.pricing-container {
+    place-content: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-inline: auto;
+    padding-block: 4rem;
+    width: min(95%, 80rem);
+    gap: 2rem;
+    grid-template-areas:
+    'one'
+    'two'
+    'three';
+    align-items: end;
+}
+.price-h1 {
+    color: white;
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 400;
+    font-size: 4em;
+    filter: drop-shadow(10px 10px 30px white);
+}
+@media screen and (min-width: 20em){
+    .pricing-container {
+        grid-template-areas:
+                "one two three";
+    }
+
+}
+
+.footer {
+    margin-top: 3em;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: start;
+    height: 258px;
+    background-color: #302E2F;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.footer-logo {
+    height: 94px;
+    width: 94px;
+    align-self: center;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.footer-h3 {
+    color: #B9B9B9;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.5em;
+
+}
+.footer-margin {
+    margin: 0 0 0.4em 1em;
+}
+.footer-text-deco {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.footer-row {
+    display: flex;
+    flex-direction: row;
+}
