@@ -1,26 +1,5 @@
-import React, {SetStateAction} from "react";
 import {Button, FormControl, Select, styled, TextField} from "@mui/material";
 
-type Logic = {
-    openReg: boolean;
-    openLog: boolean;
-    openPay: boolean;
-    openSettings: boolean;
-}
-export interface CardsLogic {
-    cardsLogicVariables: Logic;
-    setCardsLogicVariables: React.Dispatch<SetStateAction<Logic>>;
-}
-export function handleLogic(cardType: string, value: boolean, setCardsLogic: React.Dispatch<SetStateAction<Logic>>) {
-    setCardsLogic(prevState => ({...prevState, [cardType]: value}))
-}
-export interface PaymentParams {
-    planName?: string,
-    tier?: number,
-    setTierNumber: React.Dispatch<SetStateAction<number>>,
-    setPlanName: React.Dispatch<SetStateAction<string>>,
-}
-export interface PaymentProps extends CardsLogic, PaymentParams {}
 const SettingsButton = styled(Button)({
     color: '#ffffff',
     backgroundImage: 'linear-gradient(90deg, #FEA800, #2A0153)',

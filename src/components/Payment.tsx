@@ -1,17 +1,14 @@
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-import {handleLogic, PaymentProps} from "../Logic.ts";
+import {handleLogic, PaymentProps, PlanType} from "../types.ts";
 import '../css/LoginCard.css'
 import '../css/Pricing.css'
 import Icon from "@mdi/react";
 import {mdiCheck} from "@mdi/js";
-import {SettingsTextField, SettingsButton} from '../Logic.ts'
+import {SettingsTextField, SettingsButton} from '../MuiCustomComponents.ts'
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-interface PlanType {
-    planName: string | undefined
-}
 function PlanFeatures({planName}: PlanType) {
     const basicOption = ['Доступ к таблице']
     const intermediateOption = ['Базовые функции', 'Круглосуточная поддержка']

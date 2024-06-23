@@ -16,7 +16,7 @@ import {useState} from "react";
 import {createAxiosInstance} from "../axiosInstance.ts";
 import landingLogo from '../assets/svg/landing_logo.svg';
 import userProfile from '../assets/svg/temporary_dashboard.svg'
-import { CustomSelect, CustomFormControl, FormButton } from '../Logic.ts'
+import { CustomSelect, CustomFormControl, FormButton } from '../MuiCustomComponents.ts'
 function createData(name: string, surname: string, workNumber: number, id: number): DataRow {
     return { id, name, surname, workNumber };
 }

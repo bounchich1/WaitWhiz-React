@@ -6,7 +6,8 @@ import { mdiLaptop } from '@mdi/js';
 import { useState } from 'react';
 import FormTextField from "./FormTextField.tsx";
 import axios from "axios";
-import {CardsLogic, handleLogic, FormButton} from "../Logic.ts";
+import {CardsLogic, handleLogic} from "../types.ts";
+import {FormButton} from "../MuiCustomComponents.ts"
 export function RegistrationForm({cardsLogicVariables, setCardsLogicVariables}: CardsLogic) {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')

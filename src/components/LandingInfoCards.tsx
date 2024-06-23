@@ -1,12 +1,9 @@
 import '../css/LandingInfoCards.css'
 import Icon from '@mdi/react';
 import { mdiClockOutline, mdiHandshake, mdiBed } from '@mdi/js';
-interface InfoCard {
-    text: string;
-    svgIcon: string;
-    style?: string;
-}
-function InfoCard({text, svgIcon, style}: InfoCard) {
+import {InfoCardProps} from "../types.ts";
+
+function InfoCard({text, svgIcon, style}: InfoCardProps) {
     return (
         <div className={style}>
             <Icon path={svgIcon}

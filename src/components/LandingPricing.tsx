@@ -2,15 +2,9 @@ import '../css/LandingInfoCards.css'
 import '../css/Pricing.css'
 import Icon from '@mdi/react';
 import { mdiCheck } from '@mdi/js';
-import {handleLogic, PaymentProps, SettingsButton} from "../Logic.ts";
-interface Pricing {
-    type: string;
-    price: string;
-    options: Array<string>;
-    style?: string;
-    description: string;
-}
-interface PricingProps extends PaymentProps, Pricing {}
+import {handleLogic, PaymentProps, PricingProps} from "../types.ts";
+import {SettingsButton} from "../MuiCustomComponents.ts"
+
 function PricingCard ({price, style, options, type, description, cardsLogicVariables, setCardsLogicVariables, setPlanName, setTierNumber}: PricingProps) {
     const handleButtonClick = () => {
         if (localStorage.getItem('access_token') !== null) {

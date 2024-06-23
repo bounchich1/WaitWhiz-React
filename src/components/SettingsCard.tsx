@@ -1,5 +1,6 @@
 import {Box, Modal} from "@mui/material";
-import {CardsLogic, handleLogic, SettingsButton, SettingsTextField, FormButton} from "../Logic.ts";
+import {CardsLogic, handleLogic} from "../types.ts";
+import {SettingsButton, SettingsTextField, FormButton} from "../MuiCustomComponents.ts"
 import {SetStateAction, useState} from "react";
 import '../css/LoginCard.css'
 import axios from "axios";

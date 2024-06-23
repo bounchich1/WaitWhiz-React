@@ -1,5 +1,5 @@
 import '../css/LandingSpacing.css'
-import {CardsLogic, handleLogic} from "../Logic.ts";
+import {CardsLogic, handleLogic} from "../types.ts";
 import landingLogo from '../assets/svg/landing_logo.svg';
 import landingMain from '../assets/svg/landing_main.svg'
 function handleScroll(id: string) {

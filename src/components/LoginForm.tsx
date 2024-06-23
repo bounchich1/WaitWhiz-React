@@ -7,7 +7,8 @@ import Icon from "@mdi/react";
 import {mdiLaptop} from "@mdi/js";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import {CardsLogic, handleLogic, FormButton} from "../Logic.ts";
+import {CardsLogic, handleLogic} from "../types.ts";
+import {FormButton} from "../MuiCustomComponents.ts"
 export function LoginForm({cardsLogicVariables, setCardsLogicVariables}: CardsLogic) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

@@ -3,7 +3,7 @@ import {SvgIconComponent} from "@mui/icons-material";
 import MoodIcon from "@mui/icons-material/Mood";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LockIcon from "@mui/icons-material/Lock";
-import { CustomFormTextField } from '../Logic.ts'
+import { CustomFormTextField } from '../MuiCustomComponents.ts'
 import InputAdornment from "@mui/material/InputAdornment";
 import SecurityIcon from '@mui/icons-material/Security';
 interface FormTextFieldProps {
