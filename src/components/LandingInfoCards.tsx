@@ -26,7 +26,7 @@ export function LandingInfoCards() {
     const simple = "Простой и понятный интерфейс делает процесс записи быстрым и комфортным"
     return (
         <>
-            <div className="spacing-card">
+            <div className="spacing-card" id={'about'}>
                 <h1 className="h1-about">О САЙТЕ</h1>
             </div>
             <div className="card-container">

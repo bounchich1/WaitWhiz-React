@@ -1,0 +1,190 @@
+.custom-width {
+    width: 100% !important;
+    display: flex;
+    background-color: #3F314E !important;
+    margin-inline: auto;
+}
+.user-info-width {
+    height: 729px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.logout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+    align-content: center;
+    gap: 5%;
+}
+.logout-h4 {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-shrink: 0;
+    font-size: var(--step-1);
+}
+.logout-gradient-1 {
+    background-image: linear-gradient(#FEA800, #DA8367);
+}
+.logout-gradient-1:hover {
+    text-decoration: underline;
+    text-decoration-color: #E48D4C;
+    cursor: pointer;
+}
+.logout-gradient-2 {
+    background-image: linear-gradient(#AF58E3, #A64EFE);
+    margin-right: 2em;
+}
+.logout-gradient-2:hover {
+    text-decoration: underline;
+    text-decoration-color: #A64EFE;
+    cursor: pointer;
+    outline: none;
+}
+.logo-container-2 {
+    display: flex;
+    flex-direction: row;
+}
+.logo-h3 {
+    font-weight: 500;
+    font-size: var(--step-1);
+    color: #ffffff;
+    align-self: center;
+    margin: 0;
+    flex-shrink: 0;
+}
+.top-menu-container-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+    margin-top: -1.5em;
+}
+.chips-card {
+    border: double 3px transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#2D2C2F, #2D2C2F),
+    linear-gradient(90deg, #FEA800, #4F0996);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 70%;
+    height: 70px;
+    align-self: center;
+    align-content: center;
+}
+.grid-layout-1 {
+
+}
+.grid-layout-1:nth-child(1) {
+    grid-area: one;
+}
+.grid-layout-1:nth-child(2) {
+    grid-area: two;
+}
+.subjects-container {
+    display: grid;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 5rem;
+    grid-template-areas:
+  "one two two"
+  "one two two";
+    grid-auto-columns: 460px 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-block: 2rem;
+    width: min(100%, 100rem);
+
+}
+.grid-container {
+    display: grid;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 5rem;
+    grid-template-areas:
+  "two one one one one"
+  "two three three four four";
+    grid-auto-columns: 460px  80px 340px 1fr;
+    grid-template-rows: 1fr ;
+    padding-block: 2rem;
+    width: min(100%, 80rem);
+}
+.grid-layout {
+
+}
+.grid-layout:nth-child(1){
+    grid-area: one;
+}
+.grid-layout:nth-child(2){
+    grid-area: two;
+}
+.grid-layout:nth-child(3){
+    grid-area: three
+}
+.grid-layout:nth-child(4){
+    grid-area: four
+}
+.width-1 {
+    width: 485px;
+    height: 185px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.width-2 {
+    width: 650px;
+    height: 185px;
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+
+}
+.profile-h2 {
+    color: #ffffff;
+    font-size: var(--step-2);
+    font-weight: 600;
+}
+.user-name-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+}
+.profile-name {
+    color: rgba(254, 168, 0, 0.89);
+    font-size: var(--step-1);
+    font-weight: 500;
+    margin: 1em 0 .4em;
+}
+.profile-email {
+    font-weight: 400;
+    font-size: var(--step-1);
+    color: #ffffff;
+    margin: 0;
+}
+.general-h1 {
+    margin: -.6em 0 0 8em;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: var(--step-4);
+}
+.general-h1-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.buttons {
+    height: 40px !important;
+    font-size: var(--step--2) !important;
+}
+.rules-h2 {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: var(--step-0);
+    margin-top: -4.5em;
+    margin-left: 1em;
+}

@@ -2,19 +2,39 @@ import '../css/LandingInfoCards.css'
 import '../css/Pricing.css'
 import Icon from '@mdi/react';
 import { mdiCheck } from '@mdi/js';
+import {handleLogic, PaymentProps, SettingsButton} from "../Logic.ts";
 interface Pricing {
     type: string;
     price: string;
     options: Array<string>;
     style?: string;
+    description: string;
 }
-
-function PricingCard ({price, style, options, type}: Pricing) {
+interface PricingProps extends PaymentProps, Pricing {}
+function PricingCard ({price, style, options, type, description, cardsLogicVariables, setCardsLogicVariables, setPlanName, setTierNumber}: PricingProps) {
+    const handleButtonClick = () => {
+        if (localStorage.getItem('access_token') !== null) {
+            setPlanName(type)
+            if (type === 'Базовый') {
+                setTierNumber(1)
+            }
+            if (type === 'Продвинутый') {
+                setTierNumber(2)
+            }
+            if (type === 'Премиум') {
+                setTierNumber(3)
+            }
+            handleLogic('openPay', !cardsLogicVariables.openPay, setCardsLogicVariables)
+        } else {
+            handleLogic('openLog', !cardsLogicVariables.openLog, setCardsLogicVariables)
+        }
+    }
     return (
         <div className={style}>
             <h1 className="pricing-h1">{type}</h1>
-            <h2 className="pricing-h2">Description</h2>
+            <h2 className="pricing-h2">{description}</h2>
             <h1 className={"price-h1"}>{price}</h1>
+            <SettingsButton onClick={handleButtonClick} className={'price-button'}>Начать с этого</SettingsButton>
             <div className="icons-container">
                 {options && options[0] ? (
                     <div className="option-container">
@@ -70,19 +90,30 @@ function PricingCard ({price, style, options, type}: Pricing) {
         </div>
     )
 }
-export function LandingPricing() {
+export function LandingPricing({cardsLogicVariables, setCardsLogicVariables, setPlanName, setTierNumber}: PaymentProps) {
     return (
         <>
-            <div className="spacing-card">
+            <div className="spacing-card" id={'pricing'}>
                 <h1 className="h1-about">ТАРИФЫ</h1>
             </div>
             <div className="pricing-container">
                 <PricingCard type={"Базовый"} price={"1200р/мес"}
-                             style={"pricing-card pricing-card-height-1"} options={['Option 1', 'Option 2', 'Option 3']} />
+                             style={"pricing-card pricing-card-height-1"} options={['Доступ к таблице']}
+                             description={'Для новеньких'}
+                 setPlanName={setPlanName} setCardsLogicVariables={setCardsLogicVariables}
+                cardsLogicVariables={cardsLogicVariables} setTierNumber={setTierNumber}/>
                 <PricingCard type={"Продвинутый"} price={"1200р/мес"}
-                             style={"pricing-card pricing-card-height-2"} options={['Option 1', 'Option 2', 'Option 3', 'Option 4']}/>
+                             style={"pricing-card pricing-card-height-2"}
+                             options={['Базовые функции', 'Круглосуточная поддержка']}
+                description={'Для энтузиастов'} setTierNumber={setTierNumber}
+                             setPlanName={setPlanName} setCardsLogicVariables={setCardsLogicVariables}
+                             cardsLogicVariables={cardsLogicVariables}/>
                 <PricingCard type={"Премиум"} price={"1200р/мес"}
-                             style={"pricing-card pricing-card-height-3"} options={['Option 1', 'Option 2', 'Option 3']}/>
+                             style={"pricing-card pricing-card-height-3"}
+                             options={['Базовый + Продвинутый', 'Предлагайте новые фишки','Другие преимущества в будущем']}
+                             description={'Для ценителей комфорта'}
+                             setPlanName={setPlanName} setCardsLogicVariables={setCardsLogicVariables}
+                             cardsLogicVariables={cardsLogicVariables} setTierNumber={setTierNumber}/>
             </div>
             <div className={"footer"}>
                 <div className={"footer-row"}>

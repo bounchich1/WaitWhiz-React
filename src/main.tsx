@@ -1,20 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import './index.css'
 import Landing from "./components/Landing.tsx";
+import { Dashboard } from './components/Dashboard.tsx'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {RegistrationForm} from "./components/RegistrationForm.tsx";
+import {DashboardLoader} from "./loaders.ts";
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Landing />,
-        children: [
-            {
-                path: '/registration',
-                element: <RegistrationForm />,
-            }
-        ],
+
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboard />,
+      loader: DashboardLoader,
     },
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(

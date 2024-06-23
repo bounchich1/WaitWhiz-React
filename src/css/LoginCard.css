@@ -1,17 +1,99 @@
-.login-card {
+.card {
     border: double 3px transparent;
-    border-radius: 10px;
+    border-radius: 20px;
     background-image: linear-gradient(#2D2C2F, #2D2C2F),
-    linear-gradient(45deg, #FEA800, #4F0996);
-    box-shadow: 0 3px 10px 2px rgba(255, 255, 255, 0.5) !important;
+    linear-gradient(#FEA800, #4F0996);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    position: fixed;
-    display: flex;
+    position: sticky;
     margin-inline: auto;
-    justify-self: center;
-    align-self: center;
-    width: 550px;
-    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 1000;
+}
+.card:focus {
+    outline: none;
+}
+.login-card-size {
+    width: 400px;
+    height: 580px;
+}
+.reg-card-size {
+    width: 450px;
+    height: 800px;
+}
+.h2 {
+    font-size: var(--step-3);
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0
+}
+.icon {
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+.overlay-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-field {
+    color: white !important;
+    width: 75%;
+}
+.inner-icon {
+    color: #FEA800;
+}
+.h3 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    font-size: var(--step-0);
+}
+.error-message {
+    color: #ff0000;
+    font-weight: 550;
+    font-size: var(--step-0);
+    margin: .2em 0 0;
+    text-align: center;
+}
+.TextField {
+    color: white;
+    border-color: white;
+}
+.settings-size {
+    width: 360px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+.settings-h2 {
+    font-size: var(--step-1);
+    color: #ffffff;
+    margin: 1em 0 0;
+}
+.settings-h3 {
+    color: rgba(254, 168, 0, 0.89);
+    font-size: var(--step--1);
+    font-weight: 500;
+    margin: 1.5em 0 0;
+}
+.settings-h4 {
+    color: #ffffff;
+    font-size: var(--step--1);
+    font-weight: 400;
+    margin: 1em 0 0;
+}
+.payment-size {
+    width: 95%;
+    height: 65%;
+}
+.price-button {
+    margin: 0 !important;
+    margin-top: -2em !important;
 }

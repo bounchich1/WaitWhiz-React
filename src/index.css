@@ -4,16 +4,53 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #2D2C2F;
   font-synthesis: none;
+  font-family: 'Raleway', 'sans-serif';
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --step--3: clamp(0.651rem, 0.5566rem + 0.151vi, 0.736rem);
+  --step--2: clamp(0.7813rem, 0.6271rem + 0.2467vi, 0.92rem);
+  --step--1: clamp(0.9375rem, 0.7014rem + 0.3778vi, 1.15rem);
+  --step-0: clamp(1.125rem, 0.7778rem + 0.5556vi, 1.4375rem);
+  --step-1: clamp(1.35rem, 0.8535rem + 0.7944vi, 1.7969rem);
+  --step-2: clamp(1.62rem, 0.9243rem + 1.1131vi, 2.2461rem);
+  --step-3: clamp(1.944rem, 0.9844rem + 1.5353vi, 2.8076rem);
+  --step-4: clamp(2.3328rem, 1.0253rem + 2.0919vi, 3.5095rem);
+  --step-5: clamp(2.7994rem, 1.0354rem + 2.8223vi, 4.3869rem);
+  --step-6: clamp(3.3592rem, 0.9988rem + 3.7767vi, 5.4836rem);
+
+  & label.Mui-focused {
+    color: rgba(255, 255, 255, 0.44);
+  }
+
+  & label {
+    color: rgba(255, 255, 255, 0.44);
+    font-family: 'Raleway', sans-serif;
+    font-size: var(--step-0);
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7em;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 136, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fea800;
+    border-radius: 20px;
+  }
+  :-webkit-autofill,
+  :-webkit-autofill:hover,
+  :-webkit-autofill:focus,
+  :-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 35px #2D2C2F inset !important;
+    -webkit-text-fill-color: white;
+  }
 }
-
-
 body {
-
   place-items: center;
-
 }
 
 

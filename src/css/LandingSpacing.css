@@ -2,7 +2,7 @@
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: var(--step-0);
     font-style: normal;
     flex-shrink: 0;
 }
@@ -11,16 +11,18 @@
     width: 100%;
     gap: 55%;
     flex-direction: row;
+    justify-content: center;
 }
 .top-menu-left {
     display: flex;
     justify-content: left;
     flex-direction: row;
     align-items: center;
+    align-self: start;
 }
 .top-menu-right {
     display: flex;
-    gap: 25%;
+    gap: 20%;
     justify-content: right;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -32,14 +34,38 @@
     -webkit-text-fill-color: transparent;
     flex-shrink: 0;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
+    font-size: var(--step-1);
 }
-
+.gradient-1:hover {
+    text-decoration: underline;
+    text-decoration-color: #FEA800;
+    cursor: pointer;
+}
+.gradient-2:hover {
+    text-decoration: underline;
+    text-decoration-color: #E48D4C;
+    cursor: pointer;
+}
+.gradient-3:hover {
+    text-decoration: underline;
+    text-decoration-color: #CA7394;
+    cursor: pointer;
+}
+.gradient-4:hover {
+    text-decoration: underline;
+    text-decoration-color: #A64EFE;
+    cursor: pointer;
+    outline: none;
+}
 .gradient-1 {
     background-image: linear-gradient(#FEA800, #F29C21);
 }
 .gradient-2 {
     background-image: linear-gradient(#E48D4C, #D9826C);
+    width: 174px;
+    height: 173px;
+    align-content: center;
+    margin: 0;
 }
 .gradient-3 {
     background-image: linear-gradient(#CA7394, #BE67B8);
@@ -47,51 +73,57 @@
 .gradient-4 {
     background-image: linear-gradient(#AF58E3, #A64EFE);
 }
-
 .h1-2 {
     font-family: 'Raleway', sans-serif;
     color: #FEA800;
     font-style: normal;
-    font-size: 4.8em;
+    font-size: var(--step-5);
     text-align: left;
-    margin: 0.4em;
+    margin: 0 0 0.3em;
 }
 .h1-1 {
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-style: normal;
-    margin: 0.4em;
+    margin: 0 0 0.3em;
+    flex-shrink: 0;
     text-align: left;
-    font-size: 4.8em;
+    font-size: var(--step-5);
 }
 .h2-1 {
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     font-style: normal;
-    font-size: 2.4em;
+    font-size: var(--step-2);
     font-weight: 550;
     text-align: left;
-    margin: 0.8em;
+    flex-shrink: 0;
+    margin: 0 0 0.3em;
 }
 .container {
-    margin-left: 8.5em;
+    margin-left: 1em;
     margin-right: 3em;
     display: flex;
     gap: 10%;
+    justify-content: center;
+    flex-shrink: 0;
 }
 .main-logo {
-    height: 80%;
-    width: 80%;
+    height: 510px;
+    width: 700px;
+    margin-top: 3em;
 }
 .logo-container {
-    align-self: center;
-    margin-top: 5em;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
 }
 .h3-1 {
     font-weight: 450;
-    font-size: 1.9em;
+    font-size: var(--step-0);
     color: #A64EFE;
-    margin: 0 0 0 3em;
+    margin: 0;
+    align-self: center;
     text-align: left;
 }
 .register-button {
@@ -101,21 +133,21 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 1.7em;
+    font-size: var(--step-1);
     border-radius: 20px;
     box-shadow: 0 0 50px -10px rgba(255, 255, 255, 0.4) !important;
     background-image: linear-gradient(90deg, #FEA800, #2A0153);
     background-repeat: no-repeat;
     border: none;
     align-items: center;
+    align-self: center;
     text-align: center;
     transition: all 30ms ease-in;
-    margin-right: 6em;
+    justify-self: center;
     margin-top: 1em;
 }
 .register-button:hover {
     cursor: pointer;
-
 }
 .register-button:focus {
     border: none;
@@ -129,4 +161,41 @@
 }
 .text-container {
     margin-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.interface-container {
+    display: flex;
+    margin-bottom: 10em;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8em;
+}
+.margin-container {
+    margin-left: 1.7em;
+}
+
+@media screen and (min-width: 50em) {
+    .container {
+        gap: 5%;
+    }
+}
+@media screen and (min-width: 30em) {
+    .container {
+        gap: 0;
+    }
+    .top-menu-right {
+        gap: 10%;
+    }
+}
+@media screen and (min-width: 90em) {
+    .container {
+        gap: 10%;
+    }
+    .top-menu-right {
+        gap: 20%;
+    }
 }
